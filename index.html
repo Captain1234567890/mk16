@@ -1,1 +1,61 @@
-<h>hello!</h1>
+<!doctype html>
+<html>
+    <title>HTML template</title>
+    <body>
+
+<h1>This is a sample web page i created using html</h1>
+<p> The following descriptions, keys and elements your going to see below are all gonna be displayed
+    on this web page using html</p>
+
+<iframe src="demo_iframe.htm" height="100" width="200" title="Iframe Example"></iframe>
+
+<form>
+  <label for="fname">Ishimwe:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Noble:</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
+
+<p> Choose your favaurite subject:</p>
+
+<form>
+  <input type="radio" id="English comp 2" name="fav_subject" value="English comp 2">
+  <label for="English comp 2">English Comp 2</label><br>
+  <input type="radio" id="Calc 1" name="fav_subject" value="Calc 1">
+  <label for="Calc 1">Calc 1</label><br>
+  <input type="radio" id="personal finance" name="fav_subject" value="personal finance">
+  <label for="personal finance">personal finance</label>
+
+ 
+  <form>
+  <input type="checkbox" id="meal 1" name="meal 1" value="desert">
+  <label for="meal 1"> I like desert</label><br>
+  <input type="checkbox" id="meal 2" name="meal 2" value="vegetables">
+  <label for="meal 2"> I like vegetables</label><br>
+  <input type="checkbox" id="meal 3" name="meal 3" value="fruits">
+  <label for="meal 3"> I like fruits</label>
+</form>
+
+<video>
+    <video width="300" height="200" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+
+<script>
+var x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+<canvas id="myCanvas" width="300" height="200"></canvas>
